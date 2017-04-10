@@ -1,0 +1,18 @@
+﻿@model IdentityServer.Models.LoginViewModel
+
+<form asp-controller="Account" asp-action="Login" asp-route-returnurl="@Model.ReturnUrl" method="post">
+    <div>
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Password)
+        @Html.TextBoxFor(m => m.Password)
+    </div>
+    <div>
+        <input type="submit" value="Log in"/>
+    </div>
+    <p>
+        Email: test@email.com, Password: P@ssw0rd1234
+    </p>
+</form>
